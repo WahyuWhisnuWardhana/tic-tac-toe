@@ -1,4 +1,5 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 import LoginHandler from "../views/LoginHandler";
 import RegisterHandler from "../views/RegisterHandler";
 import TicTacToe from "../views/TicTacToe";
@@ -7,6 +8,7 @@ import Edit from "../components/Edit";
 import BaseLayout from "../views/BaseLayout";
 
 const url = "https://server.whisnu29.tech";
+
 const router = createBrowserRouter([
   {
     path: "/register",

@@ -70,7 +70,6 @@ export default function Lobby({ playOnlineClick }) {
 
   useEffect(() => {
     dispatch(fetchAsync());
-    navigate("/");
   }, []);
 
   if (loading) return <h1>Loading...</h1>;
