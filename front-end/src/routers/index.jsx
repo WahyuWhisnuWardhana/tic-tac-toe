@@ -9,9 +9,6 @@ import BaseLayout from "../views/BaseLayout";
 
 const url = "https://server.whisnu29.tech";
 
-const token = localStorage.access_token;
-const user = jwtDecode(token);
-
 const router = createBrowserRouter([
   {
     path: "/register",
@@ -39,7 +36,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <TicTacToe url={url} email={user.email} />,
+        element: <TicTacToe url={url} />,
         loader: () => {
           if (!localStorage.access_token) {
             return redirect("/login");

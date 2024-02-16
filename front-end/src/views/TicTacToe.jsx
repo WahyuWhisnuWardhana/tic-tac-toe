@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+
 import { io } from "socket.io-client";
 import "../assets/Board.css";
 import Square from "../components/Square";
 import Lobby from "./Lobby";
 
-export default function TicTacToe({ email }) {
+export default function TicTacToe() {
+  const token = localStorage.access_token;
+  const user = jwtDecode(token);
+  const email = user.email;
   const [gameState, setGameState] = useState([
     [1, 2, 3],
     [4, 5, 6],
