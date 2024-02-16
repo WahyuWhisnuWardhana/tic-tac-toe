@@ -20,14 +20,14 @@ export default function Login({
           <form className="space-y-6" onSubmit={handleLogin}>
             <input
               type="text"
-              className="h-14 rounded w-full border px-3 text-xl"
+              className="h-14 rounded w-full border px-3 text-xl text-yellow-300"
               placeholder="Email"
               onChange={emailOnChange}
             />
 
             <input
               type="password"
-              className="h-14 mt-3 rounded w-full border px-3 text-xl "
+              className="h-14 mt-3 rounded w-full border px-3 text-xl text-yellow-300"
               placeholder="Password"
               onChange={passwordOnChange}
             />
