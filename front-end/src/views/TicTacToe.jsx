@@ -183,6 +183,12 @@ export default function TicTacToe() {
             })
           )}
         </div>
+        <button
+          onClick={backToLobby}
+          className="bg bg-green-400 text-white p-2 text-base	mt-3 mb-3"
+        >
+          Go back to Lobby
+        </button>
         {finishedState &&
           finishedState !== "opponentLeftMatch" &&
           finishedState !== "draw" && (
